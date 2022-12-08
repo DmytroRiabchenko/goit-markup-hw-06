@@ -913,7 +913,7 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   margin-top: 4px;
   padding: 16px 12px;
   resize: none;
@@ -944,14 +944,23 @@ img {
 }
 
 .modal-button {
+  color: #ffffff;
+  background: var(--accent-color);
+  cursor: pointer;
+  border-radius: 4px;
+
   width: 200px;
   height: 50px;
-  left: 700px;
-  top: 712px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
 
-  color: #ffffff;
-  background: #2196f3;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 24px;
+  border: none;
+  transition: color 250ms;
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border-color: transparent;
 }
