@@ -953,16 +953,24 @@ img {
   border-color: #f44336;
 } */
 
-.modal-input:focus + icon-modal {
-  color: var(--accent-color);
-}
-
-/*.modal-input:hover,
 .modal-input:focus + .icon-modal {
-  outline: none;
-  border-color: var(--accent-color);
+  color: var(--hover-focus-color);
 }
 
+.modal-input:focus {
+  outline: none;
+  border: 1px solid var(--hover-focus-color);
+}
+
+.icon-modal {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  fill: currentColor;
+}
+
+/*
 .icon-modal:hover,
 .icon-modal:focus {
   color: var(--background-body);
@@ -1057,18 +1065,8 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.icon-modal {
-  position: absolute;
-}
-
 .modal-input-wrapper {
   position: relative;
   margin-top: 4px;
   margin-bottom: 10px;
-}
-
-.icon-modal {
-  top: 50%;
-  left: 15px;
-  transform: translateY(-50%);
 }
