@@ -858,6 +858,60 @@ img {
   pointer-events: none;
 }
 
+/*Призыв к действию (подписка на телеграм) */
+
+.subscribe-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  margin-left: 93px;
+}
+
+.subscribe-button {
+  width: 200px;
+  height: 50px;
+
+  color: #ffffff;
+  background: var(--accent-color);
+  cursor: pointer;
+  border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+
+  border: none;
+  transition: color 250ms;
+
+  margin-left: 12px;
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+  background: var(--hover-focus-color);
+}
+
+.subscribe-input {
+  width: 358px;
+  height: 50px;
+  background-color: rgba(47, 48, 58, 1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+
+  margin-left: 93px;
+  margin-top: 20px;
+}
+
 /*Заполнение модального окна*/
 
 .modal-head {
@@ -883,13 +937,37 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  margin-top: 4px;
-  padding-left: 12px;
+  padding-left: 42px;
 }
 
-.modal-input-group:focus {
-  border-color: #188ce8;
+/*
+.modal-input:focus-within {
+  border-color: #2196f3;
 }
+
+.modal-input:not(:placeholder-shown):required:valid {
+  border-color: #4caf50;
+}
+
+.modal-input:not(:placeholder-shown):required:invalid {
+  border-color: #f44336;
+} */
+
+.modal-input:focus + icon-modal {
+  color: var(--accent-color);
+}
+
+/*.modal-input:hover,
+.modal-input:focus + .icon-modal {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.icon-modal:hover,
+.icon-modal:focus {
+  color: var(--background-body);
+  background: var(--accent-color);
+}*/
 
 /*.modal-input::placeholder {
   font-weight: 400;
@@ -898,27 +976,40 @@ img {
   letter-spacing: 0.01em;
 
   color: rgba(117, 117, 117, 0.5);
-} */
-
+}
+*/
 .modal-input-group {
+  font-weight: 400;
   margin-top: 4px;
+}
+
+.modal-input-group label {
+  display: block;
+}
+
+.info-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+
+  letter-spacing: 0.01em;
+
+  color: #757575;
 }
 
 .comment-modal {
   width: 448px;
   height: 120px;
   left: 576px;
-  top: 518px;
+  top: 519px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  margin-bottom: 20px;
-  margin-top: 4px;
-  padding: 16px 12px;
   resize: none;
-  max-height: 120px;
-  max-width: 100%;
+
+  padding: 16px 12px;
+  margin-top: 4px;
 }
 
 .checkbox {
@@ -932,6 +1023,7 @@ img {
   color: #757575;
 
   margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 .checkbox-text {
@@ -963,4 +1055,20 @@ img {
   transition: color 250ms;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.icon-modal {
+  position: absolute;
+}
+
+.modal-input-wrapper {
+  position: relative;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.icon-modal {
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
 }
