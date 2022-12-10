@@ -860,6 +860,11 @@ img {
 
 /*Призыв к действию (подписка на телеграм) */
 
+.footer-info {
+  margin-right: 0;
+  margin-left: auto;
+}
+
 .subscribe-text {
   font-weight: 700;
   font-size: 14px;
@@ -873,6 +878,9 @@ img {
 }
 
 .subscribe-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 200px;
   height: 50px;
 
@@ -895,6 +903,10 @@ img {
 .subscribe-button:hover,
 .subscribe-button:focus {
   background: var(--hover-focus-color);
+}
+
+.footer-form-svg {
+  margin-left: 10px;
 }
 
 .subscribe-input {
@@ -955,11 +967,15 @@ img {
 
 .modal-input:focus + .icon-modal {
   color: var(--hover-focus-color);
+  transition: transform 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus {
   outline: none;
   border: 1px solid var(--hover-focus-color);
+  transition: transform 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-modal {
@@ -968,6 +984,13 @@ img {
   left: 15px;
   transform: translateY(-50%);
   fill: currentColor;
+}
+
+.comment-modal:focus {
+  outline: none;
+  border: 1px solid var(--hover-focus-color);
+  transition: transform 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*
