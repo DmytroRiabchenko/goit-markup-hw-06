@@ -829,7 +829,7 @@ img {
   transition: transform 250ms;
 }
 
-.modal-close {
+/*.modal-close {
   box-sizing: border-box;
 
   position: absolute;
@@ -850,12 +850,38 @@ img {
 
   align-items: center;
   justify-content: center;
-}
+} */
 
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.modal-close {
+  position: absolute;
+  margin-top: 8px;
+  margin-right: 8px;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 9px 9px;
+  fill: currentColor;
+  border-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+}
+
+.modal-close:focus {
+  outline: none;
+  border: 1px solid var(--hover-focus-color);
+  transition: transform 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  color: #188ce8;
 }
 
 /*Призыв к действию (подписка на телеграм) */
