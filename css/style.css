@@ -874,11 +874,11 @@ img {
   border-color: rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 1);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .modal-close:focus {
   outline: none;
-  border: 1px solid var(--hover-focus-color);
   transition: transform 250ms linear;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: #188ce8;
@@ -978,19 +978,6 @@ img {
   padding-left: 42px;
 }
 
-/*
-.modal-input:focus-within {
-  border-color: #2196f3;
-}
-
-.modal-input:not(:placeholder-shown):required:valid {
-  border-color: #4caf50;
-}
-
-.modal-input:not(:placeholder-shown):required:invalid {
-  border-color: #f44336;
-} */
-
 .modal-input:focus + .icon-modal {
   color: var(--hover-focus-color);
   transition: transform 250ms linear;
@@ -1009,6 +996,7 @@ img {
   top: 50%;
   left: 15px;
   transform: translateY(-50%);
+  color: var(--title-text-color);
   fill: currentColor;
 }
 
@@ -1081,11 +1069,56 @@ img {
 
   margin-bottom: 30px;
   margin-top: 20px;
+  margin-left: 13px;
 }
 
-.checkbox-text {
-  align-items: center;
+label.checkbox-text {
+  display: flex;
+}
+
+/*.checkbox-text::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+  display: block;
+  margin-right: 9px;
+}*/
+
+/*align-items: center;
+  justify-content: center;*/
+
+/*.input-check:checked + label::before {
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/check.svg);
+  background-color: var(--accent-color);
+}*/
+
+.span-label {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+  margin-right: 9px;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.span-label svg {
+  fill: transparent;
+}
+
+.input-check:checked + label > span {
+  border: 0.2px solid #ffffff;
+  background-color: var(--accent-color);
+}
+.input-check:checked + label > span svg {
+  fill: var(--background-body);
 }
 
 .modal-href-span {
@@ -1118,4 +1151,8 @@ img {
   position: relative;
   margin-top: 4px;
   margin-bottom: 10px;
+}
+
+.modal-href-span {
+  margin-left: 8px;
 }
