@@ -860,27 +860,23 @@ img {
 
 .modal-close {
   position: absolute;
-  margin-top: 8px;
-  margin-right: 8px;
-  right: 0;
-  top: 0;
+  right: 8px;
+  top: 8px;
   width: 30px;
   height: 30px;
-  background-image: url(../images/close.svg);
   background-repeat: no-repeat;
   background-position: center;
-  padding: 9px 9px;
   fill: currentColor;
   border-color: rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 1);
   border-radius: 50%;
   cursor: pointer;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:focus {
   outline: none;
-  transition: transform 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: #188ce8;
 }
 
@@ -899,8 +895,6 @@ img {
   text-transform: uppercase;
 
   color: #ffffff;
-
-  margin-left: 93px;
 }
 
 .subscribe-button {
@@ -938,6 +932,7 @@ img {
 .subscribe-input {
   width: 358px;
   height: 50px;
+  color: #ffffff;
   background-color: rgba(47, 48, 58, 1);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -946,7 +941,6 @@ img {
   padding-bottom: 15px;
   padding-left: 16px;
 
-  margin-left: 93px;
   margin-top: 20px;
 }
 
@@ -1000,6 +994,18 @@ img {
   fill: currentColor;
 }
 
+.comment-modal {
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  display: block;
+
+  padding: 16px 12px;
+  margin-top: 4px;
+}
+
 .comment-modal:focus {
   outline: none;
   border: 1px solid var(--hover-focus-color);
@@ -1042,21 +1048,6 @@ img {
   color: #757575;
 }
 
-.comment-modal {
-  width: 448px;
-  height: 120px;
-  left: 576px;
-  top: 519px;
-
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-
-  resize: none;
-
-  padding: 16px 12px;
-  margin-top: 4px;
-}
-
 .checkbox {
   font-weight: 400;
   font-size: 14px;
@@ -1069,11 +1060,12 @@ img {
 
   margin-bottom: 30px;
   margin-top: 20px;
-  margin-left: 13px;
 }
 
 label.checkbox-text {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*.checkbox-text::before {
@@ -1151,6 +1143,7 @@ label.checkbox-text {
   position: relative;
   margin-top: 4px;
   margin-bottom: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-href-span {
